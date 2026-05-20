@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucas Matos | Personal On-Line para Mulheres 40+</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            fitness: {
+              accent: '#eab308', /* Amarelo/Âmbar bem pegada fitness */
+              accentHover: '#ca8a04',
+              dark: '#0f172a', /* Slate bem escuro, quase preto */
+              slate: '#1e293b',
+              light: '#f8fafc'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; color: #0f172a; overflow-x: hidden; }
+    
+    .hero-bg {
+      /* Fundo levemente mais contrastante para destacar o fitness */
+      background: linear-gradient(rgba(248, 250, 252, 0.92), rgba(248, 250, 252, 0.85)), 
+                  url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover; background-position: center;
+    }
+
+    .glass { backdrop-filter: blur(12px); background: rgba(248, 250, 252, 0.9); }
+    
+    .btn-premium {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-premium:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(234, 179, 8, 0.3);
+    }
+
+    #mobile-menu { transition: 0.3s ease-in-out; transform-origin: top; }
+  </style>
+</head>
+<body>
+
+  <header class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div class="text-2xl tracking-tighter text-fitness-dark font-extrabold uppercase">
+        Lucas Matos <span class="text-fitness-accent text-xs block tracking-widest font-bold -mt-1">Treinador Especialista 40+</span>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-10">
+        <a href="#metodo" class="text-sm font-bold tracking-wide text-slate-500 hover:text-fitness-accent uppercase transition">O Desafio 40+</a>
+        <a href="#especialidades" class="text-sm font-bold tracking-wide text-slate-500 hover:text-fitness-accent uppercase transition">A Metodologia</a>
+        <a href="#sobre" class="text-sm font-bold tracking-wide text-slate-500 hover:text-fitness-accent uppercase transition">O Treinador</a>
+        <a href="https://linktr.ee/lucasmatospersonal" target="_blank" class="btn-premium bg-fitness-dark text-white px-7 py-3 rounded-md text-xs font-bold tracking-widest uppercase hover:bg-fitness-accent hover:text-fitness-dark transition">
+          Iniciar Transformação
+        </a>
+      </nav>
+
+      <button id="menu-toggle" class="lg:hidden text-fitness-dark"><i data-lucide="menu" class="w-7 h-7"></i></button>
+    </div>
+
+    <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-white border-b border-slate-200 flex-col p-8 gap-5 lg:hidden shadow-xl">
+      <a href="#metodo" class="mobile-link text-lg font-bold uppercase py-1 text-fitness-dark">O Desafio 40+</a>
+      <a href="#especialidades" class="mobile-link text-lg font-bold uppercase py-1 text-fitness-dark">A Metodologia</a>
+      <a href="#sobre" class="mobile-link text-lg font-bold uppercase py-1 text-fitness-dark">O Treinador</a>
+      <a href="https://linktr.ee/lucasmatospersonal" target="_blank" class="bg-fitness-accent text-fitness-dark py-4 rounded-md text-center font-extrabold tracking-wider uppercase text-sm">Iniciar Transformação</a>
+    </div>
+  </header>
+
+  <section class="hero-bg min-h-screen flex items-center pt-28">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 items-center gap-12 py-12">
+      <div class="lg:col-span-8">
+        <span class="inline-flex items-center gap-2 bg-fitness-dark text-white px-5 py-2 rounded-md font-bold text-xs uppercase tracking-widest mb-8 border-l-4 border-fitness-accent">
+          <i data-lucide="flame" class="w-4 h-4 text-fitness-accent"></i> Método Exclusivo para Mulheres 40+
+        </span>
+        <h1 class="text-5xl lg:text-7xl leading-[1.1] text-fitness-dark mb-6 font-extrabold tracking-tighter uppercase">
+          Desinflame o seu corpo e <span class="text-fitness-accent">emagreça de verdade.</span>
+        </h1>
+        <p class="text-lg text-slate-600 mb-12 leading-relaxed max-w-2xl font-medium">
+          Após os 40 anos, o seu metabolismo muda e o treino tradicional para de funcionar. Através da combinação exata de Treinos Metabólicos e Estratégias de Jejum, eu ajudo você a queimar gordura, recuperar sua energia e conquistar a sua melhor versão.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="https://linktr.ee/lucasmatospersonal" target="_blank" class="btn-premium bg-fitness-accent text-fitness-dark px-10 py-5 rounded-md font-extrabold text-center text-sm tracking-widest uppercase shadow-lg shadow-fitness-accent/30 hover:bg-fitness-accentHover">
+            Comece a sua transformação aqui
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-white border-t border-slate-100" id="metodo">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-20">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-fitness-dark mb-5 tracking-tight uppercase">Por que emagrecer parece tão difícil agora?</h2>
+        <p class="text-slate-500 font-medium text-lg">Você não está fazendo corpo mole. O que funcionava aos 20 anos simplesmente não funciona mais devido às mudanças hormonais e à inflamação silenciosa do corpo.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-10 rounded-xl bg-slate-50 border border-slate-200 shadow-sm hover:border-fitness-accent/50 transition duration-300">
+          <div class="w-14 h-14 bg-fitness-dark text-fitness-accent rounded-lg flex items-center justify-center mb-8 shadow-md"><i data-lucide="alert-triangle" class="w-7 h-7"></i></div>
+          <h3 class="text-2xl font-bold mb-4 text-fitness-dark uppercase tracking-tight">Inflamação Silenciosa</h3>
+          <p class="text-slate-600 font-medium leading-relaxed text-sm">Dores articulares, inchaço constante e fadiga. O corpo inflamado bloqueia a queima de gordura, tornando qualquer dieta ou exercício inútil a longo prazo.</p>
+        </div>
+        <div class="p-10 rounded-xl bg-slate-50 border border-slate-200 shadow-sm hover:border-fitness-accent/50 transition duration-300">
+          <div class="w-14 h-14 bg-fitness-dark text-fitness-accent rounded-lg flex items-center justify-center mb-8 shadow-md"><i data-lucide="snail" class="w-7 h-7"></i></div>
+          <h3 class="text-2xl font-bold mb-4 text-fitness-dark uppercase tracking-tight">Metabolismo Travado</h3>
+          <p class="text-slate-600 font-medium leading-relaxed text-sm">A sensação de que, mesmo comendo pouco, a balança não desce. Com a queda natural dos hormônios, seu corpo precisa de estímulos metabólicos específicos, não apenas de suor.</p>
+        </div>
+        <div class="p-10 rounded-xl bg-slate-50 border border-slate-200 shadow-sm hover:border-fitness-accent/50 transition duration-300">
+          <div class="w-14 h-14 bg-fitness-dark text-fitness-accent rounded-lg flex items-center justify-center mb-8 shadow-md"><i data-lucide="clock" class="w-7 h-7"></i></div>
+          <h3 class="text-2xl font-bold mb-4 text-fitness-dark uppercase tracking-tight">Treinos Exaustivos</h3>
+          <p class="text-slate-600 font-medium leading-relaxed text-sm">Passar horas na esteira ou fazer treinos genéricos que só aumentam o cortisol e a flacidez, gerando frustração e estagnação de resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-slate-50 border-t border-b border-slate-200" id="especialidades">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-20">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-fitness-accent bg-fitness-dark px-4 py-1 rounded-full">A Ciência a seu favor</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-fitness-dark mt-6 tracking-tight uppercase">A Solução Metabólica</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform">
+          <i data-lucide="zap" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Treinos Curtos</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Estímulos que ativam a via metabólica correta para sinalizar a queima de gordura até 48 horas após o fim da sessão.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform">
+          <i data-lucide="dna" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Jejum Estratégico</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Protocolos estruturados para renovação celular, controle da insulina e redução drástica da inflamação corporal.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform">
+          <i data-lucide="shield-check" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Desinflamação</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Eliminação do inchaço e retenção de líquidos através da regulação natural do seu sistema endócrino.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center hover:-translate-y-1 transition-transform">
+          <i data-lucide="smartphone" class="w-10 h-10 text-fitness-accent mx-auto mb-5"></i>
+          <h3 class="text-xl font-bold text-fitness-dark mb-2 uppercase">Personal On-Line</h3>
+          <p class="text-slate-500 text-xs font-medium leading-relaxed">Acompanhamento de elite, adaptando os treinos e estratégias para a sua rotina, na academia ou em casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-white" id="sobre">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5 relative">
+        <div class="absolute -inset-4 bg-fitness-accent rounded-xl -z-10 transform translate-x-2 translate-y-2"></div>
+        <img src="img/lucas.webp" alt="Lucas Matos" class="rounded-xl w-full aspect-[4/5] object-cover shadow-xl bg-slate-200 grayscale hover:grayscale-0 transition duration-500"
+             onerror="this.src='https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1374&auto=format&fit=crop';">
+      </div>
+      <div class="lg:col-span-7">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-slate-400 block mb-2">Personal On-Line Especialista</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold mb-8 text-fitness-dark uppercase tracking-tighter">Lucas Matos</h2>
+        <div class="space-y-6 text-slate-600 text-base font-medium leading-relaxed">
+          <p>Meu foco é claro: <strong class="text-fitness-dark">ajudar mulheres acima de 40 anos a emagrecerem de verdade</strong>, sem sofrimento, atacando a raiz do problema que é a inflamação e a lentidão metabólica.</p>
+          <p>Esqueça treinos longos e ineficientes que só machucam as suas articulações. Com a aplicação do <strong class="text-fitness-dark">Treino Metabólico alinhado aos protocolos de Jejum</strong>, ensino o seu corpo a usar a própria gordura como fonte primária de energia, resgatando a sua autoestima e vitalidade.</p>
+          
+          <div class="grid sm:grid-cols-2 gap-4 pt-6 text-sm text-fitness-dark font-bold uppercase">
+            <div class="flex items-center gap-3"><i data-lucide="target" class="text-fitness-accent w-6 h-6"></i><span>Especialista em Emagrecimento 40+</span></div>
+            <div class="flex items-center gap-3"><i data-lucide="activity" class="text-fitness-accent w-6 h-6"></i><span>Estratégias Antinflamatórias</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-28 bg-fitness-dark text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="text-4xl lg:text-6xl font-extrabold mb-6 uppercase tracking-tighter">Pronta para destravar o seu emagrecimento?</h2>
+      <p class="text-slate-400 text-lg lg:text-xl mb-12 font-medium max-w-2xl mx-auto leading-relaxed">Pare de lutar contra o seu corpo. Tenha acesso a um protocolo desenhado exclusivamente para o metabolismo feminino após os 40.</p>
+      <a href="https://linktr.ee/lucasmatospersonal" target="_blank" class="btn-premium inline-flex items-center gap-3 bg-fitness-accent text-fitness-dark px-12 py-5 rounded-md font-extrabold text-sm tracking-widest uppercase hover:bg-fitness-accentHover shadow-xl shadow-fitness-accent/20">
+        <i data-lucide="dumbbell" class="w-5 h-5"></i> Quero Começar Meu Treino
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center text-slate-400 text-xs font-bold tracking-wider uppercase">
+    <p>© 2026 Lucas Matos Personal — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    
+    // Logic for Mobile Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
